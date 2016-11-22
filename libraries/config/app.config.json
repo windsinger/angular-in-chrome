@@ -1,0 +1,150 @@
+/* 
+//  User Configurable Settings For SystemJS
+//  The following files are registered in package.json
+// 
+//  - dev.config.json
+//  - browser.config.json
+//  - package.config.json
+// 
+//  Since they are managed automatically by jspm, configuring
+//  them manually may break functionality in dependencies,
+//  we need an entry point where we can manually configure
+//  SystemJS settings to register our application. 
+*/
+
+System.config({
+    /*
+    //  baseURL is relative to the location of the page hosting 
+    //  app.config.json and not relative to the location of 
+    //  app.config.json. That is why it is advisable to set baseURL
+    //  on runtime so that it can be adjusted to location of the 
+    //  hosting page. Setting baseURL on the javascript is:
+    //
+    //    SystemJS.baseURL = '../path/to/root/';
+    //    SystemJS.import('application');
+    */
+    'baseURL': './',
+    /*
+    //  The following options enable typescript to be transpiled by
+    //  SystemJS.
+    */
+    'transpiler': 'plugin-typescript',
+    'typescriptOptions': {
+        'target': 'ES5',
+        'module': 'commonjs',
+        'sourceMap': true,
+        'noResolve': false,
+        'noImplicitAny': true,
+        'noEmitHelpers': false,
+        'inlineSources': true,
+        'removeComments': false,
+        'moduleResolution': 'node',
+        'emitDecoratorMetadata': true,
+        'experimentalDecorators': true,
+        'suppressImplicitAnyIndexErrors': true
+    },
+    'meta': {
+        'typescript': {
+            'exports': 'ts'
+        }
+    },
+    'defaultJSExtensions': false,
+    /*
+    //  The following code enables hot-reload functionality in SystemJS
+    //  based on HMR primitives developed by 'github/alexisvincent'
+    */
+    'trace': true,
+    /*    
+    //  PATHS SERVE AS ALIAS.
+    //
+    //  Normalize all path variables to ensure modules are loaded.
+    //  It is a good convention to place the baseURL at the root or
+    //  the mother folder of the application so that any resource
+    //  can be accessed. The format is:
+    //
+    //    'alias:':'real-location'
+    // 
+    //  Real location is understood to refer to the path from the 
+    //  baseURL or an absolute path to the resource.
+    //
+    //  Since paths serves as alias and their structure closely
+    //  match their distribution structure. One could theoretically
+    //  replace the paths with its online counterpart to access 
+    //  updated code or to test load times. For example:
+    //
+    //  'npm:': 'libraries/npm/' => 'npm': 'https://unpkg.com/'
+    */
+    'paths': {
+        'github:': './libraries/github/',
+        'custom:': './libraries/custom/',
+        'root:': './',
+        'npm:': './libraries/npm/'
+    },
+    'devConfig': {
+        'paths': {
+            'npm:': './libraries/npm/',
+            'root:': './',
+            'custom:': './libraries/custom/',
+            'github:': './libraries/github/'
+        },
+    },
+    'nodeConfig': {
+        'paths': {
+            'github:': './libraries/development/github/',
+            'custom:': './libraries/custom/',
+            'root:': './',
+            'npm:': './libraries/development/npm/'
+        }
+    },
+    'browserConfig': {
+        'paths': {
+            'npm:': './libraries/npm/',
+            'root:': './',
+            'custom:': './libraries/custom/',
+            'github:': './libraries/github/'
+        }
+    },
+    /*
+    //  MAP TELLS SystemJS WHERE TO LOOK FOR THINGS.
+    //
+    //  Register application name in map so that it can be called by
+    //  SystemJS when imported.The format for registering application
+    //  names is: 
+    //
+    //    'name-of-application': 'alias:location'
+    //
+    //  If no alias is specified like npm: or github: the location 
+    //  is understood to refer to the path from the baseURL.
+    // 
+    //  The registration for the required dependencies and devDependencies
+    //  are located in packages.config.json and dev.config.json. These are
+    //  managed by jspm. In order to modify entries in those location, edit
+    //  the relevant declaration in the package.json and run 'jspm update.'
+    */
+    'map': {
+        'app': 'root:app',
+        'hmr': 'custom:hot-module-reloader.js',
+        'main': 'root:app/main.ts'
+    },
+    /*
+    //  PACKAGES TELLS SystemJS HOW TO LOAD RESOURCES FROM APPLICATION
+    // 
+    //  Register application packages in packages so that SystemJS knows
+    //  how to load resources in the application. The following attempts 
+    //  to explain the settings in the packages section:
+    //
+    //    'name-of-application': {
+    //        'main': 'file-to-execute.js',
+    //        'defaultExtension': 'extension'
+    //    }
+    */
+    'packages': {
+        'app': {
+            'main': './main.ts',
+            'defaultExtension': 'ts'
+        },
+        'api': {
+            'defaultExtension': 'js'
+        }
+    }
+});

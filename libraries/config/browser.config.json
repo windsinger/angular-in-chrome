@@ -1,0 +1,6 @@
+SystemJS.config({
+  paths: {
+    "npm:": "./libraries/npm/",
+    "github:": "./libraries/github/"
+  }
+});
