@@ -37,4 +37,4 @@ NOTE: Make sure that the access file extensions setting is checked in the settin
 
 ### Incorporate HMR capability that uses web worker instead of file watcher.
 
-### Create a template for development that uses a minimum of number of dependencies or devDependencies.
+### Create template for Angular 2/SystemJS development with a minimum number of dependencies.
