@@ -23,13 +23,16 @@
 nbproject
 Thumbs.db
 
-# exclude everything except directory libraries/config
-# exclude everything except directory libraries/custom
+# Exclude everything in libraries except directory libraries/config
+# Exclude everything in libraries except directory libraries/custom
 # NPM packages folder.
 !/libraries
 /libraries/*
 !/libraries/config
 !/libraries/custom
+
+# Exclude distribution folder for zipped files
+zipped/
 
 # Brunch folder for temporary files.
 tmp/
