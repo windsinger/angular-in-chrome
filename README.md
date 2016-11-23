@@ -28,7 +28,7 @@ NOTE: Make sure that the access file extensions setting is checked in the settin
 - Application specific or custom configuration settings is in ./libraries/config/app.config.json. This configuration is invisible to jspm and must be managed manually. It contains the package registration of the application modules, the path mapping of the application code relative to the root folder, the alias registration of locations used in the dependencies or devDependencies in the other configuration files, transpiler options, as well as the baseUrl settings for SystemJS.
 
 ## Build for Production
-*Note by developer*: I am new to Angular 2 application development as well as to the npm and jspm configuration settings for build options. I am still learning the basics of Angular 2 code and as such I currently lack the knowledge or the motivation to research the optimum build configuration for deployment. Theoretically, one can use AoT or JIT or bundling the application as is. More knowledgeable and experienced developers are invited to share their suggestions by doing a commit directly to this page.
+**Note by developer**: I am new to Angular 2 application development as well as to the npm and jspm configuration settings for build options. I am still learning the basics of Angular 2 code and as such I currently lack the knowledge or the motivation to research the optimum build configuration for deployment. Theoretically, one can use AoT or JIT or bundling the application as is. More knowledgeable and experienced developers are invited to share their suggestions by doing a commit directly to this page.
 
 ## Motivations
 ### Develop Angular 2 applications offline.
