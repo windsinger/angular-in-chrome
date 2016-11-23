@@ -1,0 +1,47 @@
+# Numerous always-ignore extensions
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.vi
+*.bak
+*~
+*.sass-cache
+
+# OS or Editor folders
+.DS_Store
+.cache
+.project
+.settings
+.tmproj
+.idea
+.vs
+.vscode
+nbproject
+Thumbs.db
+
+# exclude everything except directory libraries/config
+# exclude everything except directory libraries/custom
+# NPM packages folder.
+!/libraries
+/libraries/*
+!/libraries/config
+!/libraries/custom
+
+# Brunch folder for temporary files.
+tmp/
+
+# Brunch output folder.
+public/
+
+# Bower stuff.
+bower_components/
+
+*.map
+
+# Intelij IDE
+.idea/
+*.iml
