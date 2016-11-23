@@ -10,7 +10,7 @@ It also incorporates a hot module reload capability implementing the hmr primiti
 
 Lastly, the this extension incorporates other tweaks to the assets in the Angular 2 Tour of Heroes to better adapt it for development in a local file system instead of running in a web server.
 
-## Usage
+## Installation
 1. Download or clone from GitHub.
 2. Run jspm install && jspm install -dev.
 3. Load unpacked extension to Google Chrome.
@@ -18,6 +18,15 @@ Lastly, the this extension incorporates other tweaks to the assets in the Angula
 5. Happy Hacking!
 
 NOTE: Make sure that the access file extensions setting is checked in the setting of the application found in the extensions page.
+
+## Can't use npm or jspm?
+If for some reason npm or jspm is not available, the zipped folder includes a self-contained package which includes all the necessary dependencies needed for Angular in Chrome to run out of the box.
+
+1. Download the zipped package in the zipped folder.
+2. Extract the zipped package to a local location.
+3. Load unpacked extension to Google Chrome.
+4. Add folder to workspace in Chrome Dev Tools.
+5. Happy Hacking!
 
 ## Architecture
 - The Tour of Heroes frontend is in the options page of the extension mapped to ./pages/index.html. To access it go to extensions settings and click options. Alternatively, right-click on the extension icon and click option. Doing it from chrome rather than opening the ./pages/index.html file directly bypasses Google Chrome's file access restrictions.
