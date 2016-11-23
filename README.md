@@ -1,4 +1,4 @@
-# angular-2-in-chrome
+# angular-in-chrome
 Angular 2 Tour of Heroes implemented as a Chrome extension with hot module reload capability. A template for developing Angular 2 applications offline without firing a local server instance.
 
 ## Description
