@@ -22,4 +22,4 @@ Lastly, the this extension incorporates other tweaks to the assets in the Angula
 
 ### Develop Angular 2 applications offline.
 
-### Incorporate HMR capability that uses a web worker to monitor file changes.
+### Incorporate HMR capability that uses a web worker instead of file watcher.
