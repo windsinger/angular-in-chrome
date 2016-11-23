@@ -1,15 +1,20 @@
 {
-  "name": "Angular 2 in Chrome",
-  "version": "0.5.1",
+  "name": "Angular in Chrome",
+  "version": "0.5.3",
   "manifest_version": 2,
   "description": "Angular 2 - Tour of Heroes as a chrome extension with hot module reload capability.",
   "homepage_url": "https://github.com/windsinger/angular-2-in-chrome",
   "options_page": "pages/index.html",
-  "permissions": [
-    "tabs",
-    "<all_urls>",
-    "storage",
-    "unlimitedStorage"
-  ],
+  "icons": {
+    "16": "assets/icon16.png",
+    "32": "assets/icon32.png",
+    "48": "assets/icon48.png",
+    "128": "assets/icon128.png"
+  },
+  "browser_action":{},
+  "background": {
+    "scripts": ["pages/background.js"],
+    "persistent": false
+  },
  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
 }
