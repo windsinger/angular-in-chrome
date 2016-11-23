@@ -20,6 +20,6 @@ Lastly, the this extension incorporates other tweaks to the assets in the Angula
 ## Motivations
 ### Run typescript "natively" in the browser using transpilation.
 
-### Run Angular 2 from the filesystem without firing up a server.
+### Develop Angular 2 applications offline.
 
 ### Incorporate HMR capability that uses a web worker to monitor file changes.
